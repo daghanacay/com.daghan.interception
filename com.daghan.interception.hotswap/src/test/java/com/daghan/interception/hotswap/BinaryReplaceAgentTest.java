@@ -4,10 +4,8 @@ import org.junit.Test;
 
 import com.daghan.interception.domain.RandomClass;
 
-import net.bytebuddy.ByteBuddy;
 import net.bytebuddy.agent.ByteBuddyAgent;
 import net.bytebuddy.agent.builder.AgentBuilder;
-import net.bytebuddy.dynamic.loading.ClassLoadingStrategy;
 import net.bytebuddy.implementation.MethodDelegation;
 import net.bytebuddy.matcher.ElementMatchers;
 
@@ -21,7 +19,7 @@ public class BinaryReplaceAgentTest {
 		.method(ElementMatchers.named("setValue")).intercept(MethodDelegation.to(DelegationClass.class)))
 		.installOn(ByteBuddyAgent.install());
 
-		RandomClass testClass = new RandomClass();
+		RandomClass testClass = new RandomClass(); 
 		
 		testClass.setValue("1");
 		testClass.setValue("2");

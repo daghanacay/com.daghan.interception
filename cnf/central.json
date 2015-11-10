@@ -1,0 +1,7 @@
+{
+ "revisionRefs":[{
+  "artifactId":"byte-buddy","baseline":"0.7.0","bsn":"net.bytebuddy.byte-buddy","created":1442439176265,"description":"Byte Buddy is a Java library for creating Java classes at run time.        This artifact is a build of Byte Buddy with all ASM dependencies repackaged into its own name space.","errors":1,"groupId":"net.bytebuddy","md5":"E6CB792DC055DD45EFF654F9C3B4576B","name":"Byte Buddy (without dependencies)","phase":"MASTER","qualifier":"rc2","revision":"313B68239F94A5F0222653DFE0CDA9E5854CFC2D","size":1772295,"tag":"byte-buddy-0.7-rc2","urls":["http://repo1.maven.org/maven2/net/bytebuddy/byte-buddy/0.7-rc2/byte-buddy-0.7-rc2.jar"],"version":"0.7-rc2"
+ },{
+  "artifactId":"byte-buddy-agent","baseline":"0.7.0","bsn":"net.bytebuddy.byte-buddy-agent","created":1442439027679,"description":"The Byte Buddy Java agent allows to access the JVM's HotSwap feature.","groupId":"net.bytebuddy","md5":"508903256402DAABA03101A43CBEFD25","name":"Byte Buddy Java agent","phase":"MASTER","qualifier":"rc2","revision":"563455C691E42C109309ABDD65363C13E113C345","size":17340,"tag":"byte-buddy-0.7-rc2","urls":["http://repo1.maven.org/maven2/net/bytebuddy/byte-buddy-agent/0.7-rc2/byte-buddy-agent-0.7-rc2.jar"],"version":"0.7-rc2"
+ }]
+}

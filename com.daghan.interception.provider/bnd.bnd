@@ -1,21 +1,23 @@
 #
 #  BUNDLE 
 #
-
+Premain-Class: com.daghan.interception.provider.hotswap.BinaryReplaceAgent
+Boot-Class-Path: /home/daghan/.bnd/shacache/shas/313B68239F94A5F0222653DFE0CDA9E5854CFC2D/net.bytebuddy.byte-buddy-0.7.0.rc2.jar
 
 Bundle-Version:					1.0.0.${tstamp}
 Bundle-Description: 				\
 	A bundle with a provider. Notice that this provider exports the API package. \
 	It also provides a JUnit test and it can be run standalone. \
-	\
-	${warning;Please update this Bundle-Description in com.daghan.interception.provider/bnd.bnd}
-
-Private-Package:  \
-	com.daghan.interception.provider
+	
+Private-Package: \
+	com.daghan.interception.provider,\
+	com.daghan.interception.provider.hotswap,\
+	com.daghan.interception.provider.command
 	
 -buildpath: \
 	osgi.enroute.base.api;version=1.0,\
-	com.daghan.interception.api;version=latest
+	com.daghan.interception.api;version=latest,\
+	net.bytebuddy.byte-buddy
 	
 -testpath: \
 	osgi.enroute.junit.wrapper;version=4.12
@@ -23,8 +25,17 @@ Private-Package:  \
 -includeresource: {readme.md}
 
 
--runrequires:  \
-	osgi.identity;filter:='(osgi.identity=com.daghan.interception.provider)'
+-runrequires: osgi.identity;filter:='(osgi.identity=com.daghan.interception.provider)'
 	
 -runbundles: \
-	${error;Resolve first}
+	com.daghan.interception.api;version=snapshot,\
+	com.daghan.interception.provider;version=snapshot,\
+	net.bytebuddy.byte-buddy;version='[0.7.0,0.7.1)',\
+	org.apache.felix.configadmin;version='[1.8.6,1.8.7)',\
+	org.apache.felix.log;version='[1.0.1,1.0.2)',\
+	org.apache.felix.scr;version='[2.0.0,2.0.1)',\
+	org.eclipse.equinox.metatype;version='[1.4.100,1.4.101)',\
+	org.osgi.service.metatype;version='[1.3.0,1.3.1)'
+-runfw: org.eclipse.osgi;version='[3.10.100.v20150529-1857,3.10.100.v20150529-1857]'
+-runee: JavaSE-1.8
+-runvm: -javaagent:generated/com.daghan.interception.provider.jar
