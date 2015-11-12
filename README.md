@@ -7,7 +7,7 @@ Objective of this project is to understand the method interception in java in ge
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
 
-|            |  MVN                           | Enroute/OSGi           |
+|            |  MVN                 |         | Enroute/OSGi |         |
 | ---------- | -------------------- | ------- | ------------ | ------- |
 |            | Agent                | Factory | Agent        | Factory |
 | ---------- | -------------------- | ------- | ------------ | ------- |
