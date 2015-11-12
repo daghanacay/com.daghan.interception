@@ -41,3 +41,4 @@ Private-Package: \
 -runfw: org.eclipse.osgi;version='[3.10.100.v20150529-1857,3.10.100.v20150529-1857]'
 -runee: JavaSE-1.8
 -runvm: -javaagent:generated/com.daghan.interception.provider.jar
+Export-Package: com.daghan.interception.provider.domain

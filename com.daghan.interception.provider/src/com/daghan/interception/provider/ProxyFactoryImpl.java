@@ -16,7 +16,7 @@ import com.daghan.interception.api.ProxyFactory;
 /**
  * 
  */
-@Component(name = "com.daghan.interception")
+@Component(property={"factory=javaproxy"})
 public class ProxyFactoryImpl implements ProxyFactory {
 
 	@Override

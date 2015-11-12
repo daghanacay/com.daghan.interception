@@ -1,0 +1,17 @@
+#
+#  RUN SPECIFICATION
+#
+
+
+Bundle-Version:				1.0.0.${tstamp}
+Bundle-SymbolicName:		com.daghan.interception.application.launch
+JPM-Command:					intrcpt
+
+
+-runfw:						org.eclipse.osgi
+
+-runrequires:  \
+	osgi.identity;filter:='(osgi.identity=com.daghan.interception.application)'
+
+-runbundles: \
+	${error;Resolve first}

@@ -4,6 +4,8 @@ import static net.bytebuddy.matcher.ElementMatchers.nameContains;
 
 import java.util.List;
 
+import org.osgi.service.component.annotations.Component;
+
 import com.daghan.interception.api.ProxyFactory;
 import com.daghan.interception.provider.core.DelegationClass;
 import com.daghan.interception.provider.core.LogClass;
@@ -12,6 +14,7 @@ import net.bytebuddy.ByteBuddy;
 import net.bytebuddy.dynamic.loading.ClassLoadingStrategy;
 import net.bytebuddy.implementation.MethodDelegation;
 
+@Component(property={"factory=bytebuddy"})
 public class ProxyFactoryByteBuddy implements ProxyFactory {
 
 	public <T> T newInstance(Class<T> interfaceClass, Object obj) {
