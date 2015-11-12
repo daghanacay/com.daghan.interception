@@ -2,11 +2,6 @@
 
 Objective of this project is to understand the method interception in java in general and in OSGi in particular. There are multiple ways of doing method interception. The dimensions investigated here are 
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-
 |            |  MVN                 |         | Enroute/OSGi |         |
 | ---------- | -------------------- | ------- | ------------ | ------- |
 |            | Agent                | Factory | Agent        | Factory |
@@ -14,9 +9,10 @@ Objective of this project is to understand the method interception in java in ge
 | Java Proxy | none                 | none    | none         | yes     |
 | Byte Buddy | ByteBuddy and Custom | yes     | Custom Agent | yes     |
 
+Where "none" means not investigates in this project.
 
 * Technology: We consider the following technologies
-** Standard Java proxy libraries in JavaJRE, this are quite basic and can only be used creating proxies for interfaces. It does not have support for rebasing or transforming existing code. However it is good startig point for understanding proxying 
+..* Standard Java proxy libraries in JavaJRE, this are quite basic and can only be used creating proxies for interfaces. It does not have support for rebasing or transforming existing code. However it is good startig point for understanding proxying 
 ** Byte buddy libraries: these are designed as a DSL for defining, rebasing, subclassing existing code. it is quite powerfull and has a healthy activity.
 
 The technologies we have not included in this release are 
