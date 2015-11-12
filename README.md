@@ -38,3 +38,13 @@ We consider the following methods
 We consider the following build systems (frameworks)
 * Maven: just a dependency management system at build time. works on vanila Java class loader
 * Enroute: build system that extends MVN and deploys on OSGi framework taht can also handle runtime dependecy managagement.
+
+# Requirements
+
+we have consodered the following requirements
+
+1. We want to intercept every method independent of the method signature
+2. We want to provide annotations to software developers that use our framework. Custom annotations and relevant interceptors should be easy to extend
+3. We prefer want to stay away from the developer's ways. That is interception should be transparent to the developers such that the developers do not need to learn the framework except for the annotations.
+4. Framework should support dependency injection such that if the developers want to use more intricate intercaption functionality through proxy factories they should be able to do so
+5. The framework should be easy extend either by annotatins or proxy factory injection.
