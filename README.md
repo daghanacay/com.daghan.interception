@@ -8,7 +8,7 @@ Objective of this project is to understand the method interception in java in ge
 | Content Cell  | Content Cell  |
 
 |     a      | MVN                  |   a     | Enroute/OSGi |    a    |
-|     a      | Agent                | Factory |Agent         | Factory |
+|     a      | Agent                | Factory | Agent        | Factory |
 | ---------- | -------------------- | ------- | ------------ | ------- |
 | Java Proxy | none                 | none    | none         | yes     |
 | Byte Buddy | ByteBuddy and Custom | yes     | Custom Agent | yes     |
