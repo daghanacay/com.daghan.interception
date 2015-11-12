@@ -1,7 +1,7 @@
 #
 #  BUNDLE 
 #
-Premain-Class: com.daghan.interception.provider.hotswap.BinaryReplaceAgent
+Premain-Class: com.daghan.interception.provider.core.javaagent.BinaryReplaceAgent
 Boot-Class-Path: /home/daghan/.bnd/shacache/shas/313B68239F94A5F0222653DFE0CDA9E5854CFC2D/net.bytebuddy.byte-buddy-0.7.0.rc2.jar
 
 Bundle-Version:					1.0.0.${tstamp}
@@ -11,7 +11,9 @@ Bundle-Description: 				\
 	
 Private-Package: \
 	com.daghan.interception.provider,\
-	com.daghan.interception.provider.hotswap,\
+	com.daghan.interception.provider.core,\
+	com.daghan.interception.provider.domain,\
+	com.daghan.interception.provider.core.javaagent,\
 	com.daghan.interception.provider.command
 	
 -buildpath: \
